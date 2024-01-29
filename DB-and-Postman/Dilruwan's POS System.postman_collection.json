@@ -1,0 +1,1721 @@
+{
+	"info": {
+		"_postman_id": "9b70ccbd-9ad1-4ac4-ab0d-5d33cf4a2716",
+		"name": "Dilruwan's POS System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13881782"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userEmail\": \"ravinath@gmail.com\",\r\n  \"userPassword\": \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pos/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userEmail\": \"ravinath@gmail.com\",\r\n  \"userPassword\": \"abc123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 15 Jan 2024 18:35:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-15T18:35:56.551+00:00\",\n    \"message\": \"User fund\",\n    \"data\": {\n        \"userId\": 1,\n        \"userEmail\": \"ravinath@gmail.com\",\n        \"userFullName\": \"Ravinath Perera\",\n        \"userStatus\": 1,\n        \"userRole\": \"ADMIN\",\n        \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDgwMjIxNTYsImlhdCI6MTcwNTM0Mzc1Nn0.cj_iHyobJZIVJKGR0svCbbgFFDoSlDBLLm2hp_56fjbvUGWYrgnbSBGsC50X2r46APcDfsPVx6F0Y_fbcrXRnQ\"\n    },\n    \"statusCode\": 200,\n    \"statusMessage\": \"Success\"\n}"
+						},
+						{
+							"name": "Failure Response (403 - forbidden)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userEmail\": \"ravinath@gmail.com\",\r\n  \"userPassword\": \"abcd1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 15 Jan 2024 18:38:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Save Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDgxMjE3MjYsImlhdCI6MTcwNTQ0MzMyNn0.pDl-8gDHfVK6xSMqlIGROYkx_JyiIJilpHtvp72iPgU_pMjFg4mh_MvfvqRPrgIpg4o82el7d87hCKQIwFi97g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\":\"Grocery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pos/api/category/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"category",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\":\"Grocery\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/category/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"category",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 22:16:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-16T22:16:14.137+00:00\",\n    \"message\": \"Successfully Registered\",\n    \"data\": {\n        \"categoryId\": 1,\n        \"categoryName\": \"Grocery\",\n        \"categoryStatus\": 1\n    },\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDgxMjE3MjYsImlhdCI6MTcwNTQ0MzMyNn0.pDl-8gDHfVK6xSMqlIGROYkx_JyiIJilpHtvp72iPgU_pMjFg4mh_MvfvqRPrgIpg4o82el7d87hCKQIwFi97g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\":1,\r\n    \"categoryName\":\"Grocery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pos/api/category/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"category",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryId\":1,\r\n    \"categoryName\":\"Grocery\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/category/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"category",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 22:20:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-16T22:20:48.413+00:00\",\n    \"message\": \"Successfully Updated\",\n    \"data\": {\n        \"categoryId\": 1,\n        \"categoryName\": \"Grocery\",\n        \"categoryStatus\": 1\n    },\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Active Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDgxMjE3MjYsImlhdCI6MTcwNTQ0MzMyNn0.pDl-8gDHfVK6xSMqlIGROYkx_JyiIJilpHtvp72iPgU_pMjFg4mh_MvfvqRPrgIpg4o82el7d87hCKQIwFi97g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\":\"Grocery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pos/api/category/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"category",
+								"getAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\":\"Grocery\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/category/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"category",
+										"getAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 22:21:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-16T22:21:06.933+00:00\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"categoryId\": 1,\n            \"categoryName\": \"Grocery\",\n            \"categoryStatus\": 1\n        }\n    ],\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDgxMjE3MjYsImlhdCI6MTcwNTQ0MzMyNn0.pDl-8gDHfVK6xSMqlIGROYkx_JyiIJilpHtvp72iPgU_pMjFg4mh_MvfvqRPrgIpg4o82el7d87hCKQIwFi97g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\":\"Grocery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pos/api/category/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"category",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"categoryName\":\"Grocery\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/category/delete/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"category",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 22:22:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-16T22:22:26.752+00:00\",\n    \"message\": \"Successfully Deleted\",\n    \"data\": null,\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All Active Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDg0MzMxODMsImlhdCI6MTcwNTc1NDc4M30.niImRG463iFiyrEjtf1sQw17oxTob355IA4CEe2ULels0fEKk3G58C4FZg821XBgbYAoM_XJ6CnwtfGOaXbIrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pos/api/product/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"product",
+								"getAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/pos/api/product/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"product",
+										"getAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 12:54:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-20T12:54:19.415+00:00\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"productId\": 1,\n            \"productName\": \"Ala\",\n            \"productDescription\": \"Ala\",\n            \"productImgPath\": \"Ala\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Grocery\",\n            \"productStock\": {\n                \"productStockId\": 1,\n                \"sellingPrice\": 100,\n                \"qty\": 100,\n                \"unitOfMeasure\": \"KG\",\n                \"productId\": 1,\n                \"packSize\": 1\n            }\n        }\n    ],\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product By Product ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDg0MzMxODMsImlhdCI6MTcwNTc1NDc4M30.niImRG463iFiyrEjtf1sQw17oxTob355IA4CEe2ULels0fEKk3G58C4FZg821XBgbYAoM_XJ6CnwtfGOaXbIrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pos/api/product/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"product",
+								"getAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/pos/api/product/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"product",
+										"getAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 12:54:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-20T12:54:19.415+00:00\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"productId\": 1,\n            \"productName\": \"Ala\",\n            \"productDescription\": \"Ala\",\n            \"productImgPath\": \"Ala\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Grocery\",\n            \"productStock\": {\n                \"productStockId\": 1,\n                \"sellingPrice\": 100,\n                \"qty\": 100,\n                \"unitOfMeasure\": \"KG\",\n                \"productId\": 1,\n                \"packSize\": 1\n            }\n        }\n    ],\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/pos/api/product/getById/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"product",
+										"getById",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 13:20:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-20T13:20:53.837+00:00\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"productId\": 1,\n        \"productName\": \"Ala\",\n        \"productDescription\": \"Ala 1KG pack\",\n        \"productImgPath\": \"Ala 1KG pack\",\n        \"categoryId\": 1,\n        \"categoryName\": \"Grocery\",\n        \"productStock\": {\n            \"productStockId\": 1,\n            \"sellingPrice\": 100,\n            \"qty\": 110,\n            \"unitOfMeasure\": \"KG\",\n            \"productId\": 1,\n            \"packSize\": 1\n        }\n    },\n    \"statusCode\": 200,\n    \"statusMessage\": \"Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Save Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDg0MzMxODMsImlhdCI6MTcwNTc1NDc4M30.niImRG463iFiyrEjtf1sQw17oxTob355IA4CEe2ULels0fEKk3G58C4FZg821XBgbYAoM_XJ6CnwtfGOaXbIrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"Ala\",\r\n    \"productDescription\":\"Ala\",\r\n    \"productImgPath\":\"https://media.istockphoto.com/id/1475113258/photo/raw-potatoes-freshly-cut-in-half-isolated-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=BwgBeKVDEqXSoTbCEtaU2F8PpIVspxCuBPx47hwv_YI=\",\r\n    \"categoryId\":1,\r\n    \"productStock\":{\r\n        \"sellingPrice\":100,\r\n        \"qty\":100,\r\n        \"unitOfMeasure\":\"KG\",\r\n        \"packSize\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pos/api/product/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"product",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\":\"Ala\",\r\n    \"productDescription\":\"Ala\",\r\n    \"productImgPath\":\"https://media.istockphoto.com/id/1475113258/photo/raw-potatoes-freshly-cut-in-half-isolated-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=BwgBeKVDEqXSoTbCEtaU2F8PpIVspxCuBPx47hwv_YI=\",\r\n    \"categoryId\":1,\r\n    \"productStock\":{\r\n        \"sellingPrice\":100,\r\n        \"qty\":100,\r\n        \"unitOfMeasure\":\"KG\",\r\n        \"packSize\":1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/product/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"product",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 12:52:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-20T12:52:10.593+00:00\",\n    \"message\": \"Successfully saved\",\n    \"data\": {\n        \"productId\": 1,\n        \"productName\": \"Ala\",\n        \"productDescription\": \"Ala\",\n        \"productImgPath\": \"Ala\",\n        \"categoryId\": 1,\n        \"categoryName\": \"Grocery\",\n        \"productStock\": {\n            \"productStockId\": 1,\n            \"sellingPrice\": 100,\n            \"qty\": 100,\n            \"unitOfMeasure\": \"KG\",\n            \"productId\": 1,\n            \"packSize\": 1\n        }\n    },\n    \"statusCode\": 200,\n    \"statusMessage\": \"Success\"\n}"
+						},
+						{
+							"name": "Bad Request (Validation Faliure)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\":\"Ala\",\r\n    \"productDescription\":\"Ala\",\r\n    \"productImgPath\":\"https://media.istockphoto.com/id/1475113258/photo/raw-potatoes-freshly-cut-in-half-isolated-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=BwgBeKVDEqXSoTbCEtaU2F8PpIVspxCuBPx47hwv_YI=\",\r\n    \"categoryId\":1,\r\n    \"productStock\":{\r\n        \"sellingPrice\":100,\r\n        \"qty\":100,\r\n        \"unitOfMeasure\":\"KG\",\r\n        \"packSize\":1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/product/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"product",
+										"save"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 12:52:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-20T12:52:41.902+00:00\",\n    \"message\": null,\n    \"data\": null,\n    \"statusCode\": 400,\n    \"statusMessage\": \"Bad Request\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDg0MzMxODMsImlhdCI6MTcwNTc1NDc4M30.niImRG463iFiyrEjtf1sQw17oxTob355IA4CEe2ULels0fEKk3G58C4FZg821XBgbYAoM_XJ6CnwtfGOaXbIrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"Ala\",\r\n    \"productDescription\":\"Ala\",\r\n    \"productImgPath\":\"https://media.istockphoto.com/id/1475113258/photo/raw-potatoes-freshly-cut-in-half-isolated-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=BwgBeKVDEqXSoTbCEtaU2F8PpIVspxCuBPx47hwv_YI=\",\r\n    \"productStock\":{\r\n        \"sellingPrice\":100,\r\n        \"qty\":110,\r\n        \"unitOfMeasure\":\"KG\",\r\n        \"packSize\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pos/api/product/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"product",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\":1,\r\n    \"productName\":\"Ala\",\r\n    \"productDescription\":\"Ala 1KG pack\",\r\n    \"categoryId\":1,\r\n    \"productImgPath\":\"https://media.istockphoto.com/id/1475113258/photo/raw-potatoes-freshly-cut-in-half-isolated-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=BwgBeKVDEqXSoTbCEtaU2F8PpIVspxCuBPx47hwv_YI=\",\r\n    \"productStock\":{\r\n        \"sellingPrice\":100,\r\n        \"qty\":110,\r\n        \"unitOfMeasure\":\"KG\",\r\n        \"packSize\":1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/product/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"product",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 13:02:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-20T13:02:49.811+00:00\",\n    \"message\": \"Successfully Updated\",\n    \"data\": {\n        \"productId\": 1,\n        \"productName\": \"Ala\",\n        \"productDescription\": \"Ala 1KG pack\",\n        \"productImgPath\": \"Ala 1KG pack\",\n        \"categoryId\": 1,\n        \"categoryName\": \"Grocery\",\n        \"productStock\": {\n            \"productStockId\": 1,\n            \"sellingPrice\": 100,\n            \"qty\": 110,\n            \"unitOfMeasure\": \"KG\",\n            \"productId\": 1,\n            \"packSize\": 1\n        }\n    },\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDg0MzMxODMsImlhdCI6MTcwNTc1NDc4M30.niImRG463iFiyrEjtf1sQw17oxTob355IA4CEe2ULels0fEKk3G58C4FZg821XBgbYAoM_XJ6CnwtfGOaXbIrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pos/api/product/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"product",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/pos/api/product/delete/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"product",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Jan 2024 13:11:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-20T13:11:31.717+00:00\",\n    \"message\": \"Successfully Deleted\",\n    \"data\": null,\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Add Invoice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpbmF0aEBnbWFpbC5jb20iLCJleHAiOjE3MDgxMjE3MjYsImlhdCI6MTcwNTQ0MzMyNn0.pDl-8gDHfVK6xSMqlIGROYkx_JyiIJilpHtvp72iPgU_pMjFg4mh_MvfvqRPrgIpg4o82el7d87hCKQIwFi97g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"netTotal\":9000,\r\n    \"payment\":10000,\r\n    \"invoiceItemList\":[\r\n        {\r\n            \"itemQty\":9,\r\n            \"itemPrice\":1000,\r\n            \"subTotal\":9000,\r\n            \"productStockId\":1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pos/api/invoice/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pos",
+								"api",
+								"invoice",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"netTotal\":9000,\r\n    \"payment\":10000,\r\n    \"invoiceItemList\":[\r\n        {\r\n            \"itemQty\":9,\r\n            \"itemPrice\":1000,\r\n            \"subTotal\":9000,\r\n            \"productStockId\":1\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/pos/api/invoice/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pos",
+										"api",
+										"invoice",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2024 16:55:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"date\": \"2024-01-21T16:55:23.544+00:00\",\n    \"message\": \"Successfully Saved\",\n    \"data\": {\n        \"invoiceId\": 1,\n        \"invoiceDate\": \"2024-01-21 10:25:23\",\n        \"netTotal\": 9000,\n        \"payment\": 10000,\n        \"invoiceStatus\": 1,\n        \"user\": {\n            \"userId\": 1,\n            \"userEmail\": \"ravinath@gmail.com\",\n            \"userFullName\": \"Ravinath Perera\",\n            \"userStatus\": 1,\n            \"userRole\": \"ADMIN\"\n        },\n        \"invoiceItemList\": [\n            {\n                \"itemQty\": 9,\n                \"itemPrice\": 1000,\n                \"subTotal\": 9000,\n                \"productStockId\": 1,\n                \"productName\": \"Ala\",\n                \"productId\": 1\n            }\n        ]\n    },\n    \"statusCode\": 200,\n    \"statusMessage\": \"ok\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
